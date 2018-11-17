@@ -1,0 +1,15 @@
+
+/* Class = "UINavigationItem"; title = "Choose an Address"; ObjectID = "IMK-0e-vJV"; */
+"IMK-0e-vJV.title" = "Choose an Address";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "MDX-gq-ImM"; */
+"MDX-gq-ImM.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "RcY-FQ-bov"; */
+"RcY-FQ-bov.normalTitle" = "Confirm Address";
+
+/* Class = "UITabBarItem"; title = "Favorite"; ObjectID = "mCh-3c-dgK"; */
+"mCh-3c-dgK.title" = "Favorite";
+
+/* Class = "UITabBarItem"; title = "Explore"; ObjectID = "vO7-6v-o6r"; */
+"vO7-6v-o6r.title" = "Explore";

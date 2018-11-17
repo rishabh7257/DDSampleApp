@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		F32359D2219FDF60007A66DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F32359D1219FDF60007A66DE /* AppDelegate.m */; };
-		F32359D5219FDF60007A66DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32359D4219FDF60007A66DE /* ViewController.m */; };
 		F32359D8219FDF60007A66DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32359D6219FDF60007A66DE /* Main.storyboard */; };
 		F32359DA219FDF61007A66DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F32359D9219FDF61007A66DE /* Assets.xcassets */; };
 		F32359DD219FDF61007A66DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32359DB219FDF61007A66DE /* LaunchScreen.storyboard */; };
 		F32359E0219FDF61007A66DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F32359DF219FDF61007A66DE /* main.m */; };
 		F32359EA219FDF62007A66DE /* DDSampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F32359E9219FDF62007A66DE /* DDSampleAppTests.m */; };
 		F32359F5219FDF62007A66DE /* DDSampleAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F32359F4219FDF62007A66DE /* DDSampleAppUITests.m */; };
+		F3235A06219FE78D007A66DE /* DDChooseAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A05219FE78D007A66DE /* DDChooseAddressViewController.m */; };
+		F3235A0C219FEF09007A66DE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3235A0B219FEF09007A66DE /* CoreLocation.framework */; };
+		F3235A0F219FFBA9007A66DE /* DDDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A0E219FFBA9007A66DE /* DDDataManager.m */; };
+		F3235A1321A0A9FE007A66DE /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3235A1221A0A9FE007A66DE /* Contacts.framework */; };
+		F3235A1921A0ADD6007A66DE /* DDLocationServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A1821A0ADD6007A66DE /* DDLocationServiceImpl.m */; };
+		F3235A1F21A0B403007A66DE /* DDMapServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A1E21A0B403007A66DE /* DDMapServiceImpl.m */; };
+		F3235A2221A0B426007A66DE /* DDMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A2121A0B426007A66DE /* DDMapView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +44,6 @@
 		F32359CD219FDF60007A66DE /* DDSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F32359D0219FDF60007A66DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F32359D1219FDF60007A66DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F32359D3219FDF60007A66DE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F32359D4219FDF60007A66DE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F32359D7219FDF60007A66DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F32359D9219FDF61007A66DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F32359DC219FDF61007A66DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +55,23 @@
 		F32359F0219FDF62007A66DE /* DDSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F32359F4219FDF62007A66DE /* DDSampleAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDSampleAppUITests.m; sourceTree = "<group>"; };
 		F32359F6219FDF62007A66DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3235A03219FE636007A66DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		F3235A04219FE78D007A66DE /* DDChooseAddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDChooseAddressViewController.h; sourceTree = "<group>"; };
+		F3235A05219FE78D007A66DE /* DDChooseAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDChooseAddressViewController.m; sourceTree = "<group>"; };
+		F3235A0B219FEF09007A66DE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F3235A0D219FFBA9007A66DE /* DDDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDDataManager.h; sourceTree = "<group>"; };
+		F3235A0E219FFBA9007A66DE /* DDDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDDataManager.m; sourceTree = "<group>"; };
+		F3235A10219FFD7B007A66DE /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		F3235A11219FFD7B007A66DE /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F3235A1221A0A9FE007A66DE /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		F3235A1421A0ADCA007A66DE /* DDLocationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDLocationService.h; sourceTree = "<group>"; };
+		F3235A1721A0ADD6007A66DE /* DDLocationServiceImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDLocationServiceImpl.h; sourceTree = "<group>"; };
+		F3235A1821A0ADD6007A66DE /* DDLocationServiceImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDLocationServiceImpl.m; sourceTree = "<group>"; };
+		F3235A1A21A0B3F7007A66DE /* DDMapService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDMapService.h; sourceTree = "<group>"; };
+		F3235A1D21A0B403007A66DE /* DDMapServiceImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDMapServiceImpl.h; sourceTree = "<group>"; };
+		F3235A1E21A0B403007A66DE /* DDMapServiceImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDMapServiceImpl.m; sourceTree = "<group>"; };
+		F3235A2021A0B426007A66DE /* DDMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDMapView.h; sourceTree = "<group>"; };
+		F3235A2121A0B426007A66DE /* DDMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDMapView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3235A1321A0A9FE007A66DE /* Contacts.framework in Frameworks */,
+				F3235A0C219FEF09007A66DE /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +108,7 @@
 				F32359E8219FDF62007A66DE /* DDSampleAppTests */,
 				F32359F3219FDF62007A66DE /* DDSampleAppUITests */,
 				F32359CE219FDF60007A66DE /* Products */,
+				F3235A0A219FEF09007A66DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,15 +125,20 @@
 		F32359CF219FDF60007A66DE /* DDSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				F3235A2421A0B462007A66DE /* Storyboard */,
+				F3235A2321A0B433007A66DE /* Support */,
 				F32359D0219FDF60007A66DE /* AppDelegate.h */,
 				F32359D1219FDF60007A66DE /* AppDelegate.m */,
-				F32359D3219FDF60007A66DE /* ViewController.h */,
-				F32359D4219FDF60007A66DE /* ViewController.m */,
-				F32359D6219FDF60007A66DE /* Main.storyboard */,
-				F32359D9219FDF61007A66DE /* Assets.xcassets */,
-				F32359DB219FDF61007A66DE /* LaunchScreen.storyboard */,
-				F32359DE219FDF61007A66DE /* Info.plist */,
-				F32359DF219FDF61007A66DE /* main.m */,
+				F3235A04219FE78D007A66DE /* DDChooseAddressViewController.h */,
+				F3235A05219FE78D007A66DE /* DDChooseAddressViewController.m */,
+				F3235A0D219FFBA9007A66DE /* DDDataManager.h */,
+				F3235A0E219FFBA9007A66DE /* DDDataManager.m */,
+				F3235A2521A0B480007A66DE /* Location */,
+				F3235A1A21A0B3F7007A66DE /* DDMapService.h */,
+				F3235A1D21A0B403007A66DE /* DDMapServiceImpl.h */,
+				F3235A1E21A0B403007A66DE /* DDMapServiceImpl.m */,
+				F3235A2021A0B426007A66DE /* DDMapView.h */,
+				F3235A2121A0B426007A66DE /* DDMapView.m */,
 			);
 			path = DDSampleApp;
 			sourceTree = "<group>";
@@ -130,6 +159,44 @@
 				F32359F6219FDF62007A66DE /* Info.plist */,
 			);
 			path = DDSampleAppUITests;
+			sourceTree = "<group>";
+		};
+		F3235A0A219FEF09007A66DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3235A1221A0A9FE007A66DE /* Contacts.framework */,
+				F3235A0B219FEF09007A66DE /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3235A2321A0B433007A66DE /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F32359DE219FDF61007A66DE /* Info.plist */,
+				F32359DF219FDF61007A66DE /* main.m */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		F3235A2421A0B462007A66DE /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F32359D6219FDF60007A66DE /* Main.storyboard */,
+				F32359D9219FDF61007A66DE /* Assets.xcassets */,
+				F32359DB219FDF61007A66DE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F3235A2521A0B480007A66DE /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				F3235A1421A0ADCA007A66DE /* DDLocationService.h */,
+				F3235A1721A0ADD6007A66DE /* DDLocationServiceImpl.h */,
+				F3235A1821A0ADD6007A66DE /* DDLocationServiceImpl.m */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +329,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F32359D5219FDF60007A66DE /* ViewController.m in Sources */,
+				F3235A1F21A0B403007A66DE /* DDMapServiceImpl.m in Sources */,
+				F3235A06219FE78D007A66DE /* DDChooseAddressViewController.m in Sources */,
 				F32359E0219FDF61007A66DE /* main.m in Sources */,
+				F3235A1921A0ADD6007A66DE /* DDLocationServiceImpl.m in Sources */,
 				F32359D2219FDF60007A66DE /* AppDelegate.m in Sources */,
+				F3235A2221A0B426007A66DE /* DDMapView.m in Sources */,
+				F3235A0F219FFBA9007A66DE /* DDDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +375,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				F32359D7219FDF60007A66DE /* Base */,
+				F3235A03219FE636007A66DE /* en */,
+				F3235A10219FFD7B007A66DE /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -312,6 +385,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F32359DC219FDF61007A66DE /* Base */,
+				F3235A11219FFD7B007A66DE /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -323,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -381,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
