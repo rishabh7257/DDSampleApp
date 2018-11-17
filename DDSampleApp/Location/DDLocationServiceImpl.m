@@ -37,7 +37,7 @@
 #pragma mark - DDLocationService
 
 - (NSString *)currentUserFriendlyAddress {
-    <#code#>
+    return @"";
 }
 
 - (void)currentUserFriendlyAddress:(CLLocation *)location
@@ -90,6 +90,11 @@
             break;
     }
 }
+
+- (CLLocation *)currentUserLocation {
+    return self.locationManager.location;
+}
+
 
 #pragma mark - PrivateMethods
 

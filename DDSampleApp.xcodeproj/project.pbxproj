@@ -19,8 +19,8 @@
 		F3235A0F219FFBA9007A66DE /* DDDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A0E219FFBA9007A66DE /* DDDataManager.m */; };
 		F3235A1321A0A9FE007A66DE /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3235A1221A0A9FE007A66DE /* Contacts.framework */; };
 		F3235A1921A0ADD6007A66DE /* DDLocationServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A1821A0ADD6007A66DE /* DDLocationServiceImpl.m */; };
-		F3235A1F21A0B403007A66DE /* DDMapServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A1E21A0B403007A66DE /* DDMapServiceImpl.m */; };
-		F3235A2221A0B426007A66DE /* DDMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A2121A0B426007A66DE /* DDMapView.m */; };
+		F3235A2921A0B64E007A66DE /* DDMapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A2721A0B64E007A66DE /* DDMapViewViewController.m */; };
+		F3235A2A21A0B64E007A66DE /* DDMapViewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3235A2821A0B64E007A66DE /* DDMapViewView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,11 +67,9 @@
 		F3235A1421A0ADCA007A66DE /* DDLocationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDLocationService.h; sourceTree = "<group>"; };
 		F3235A1721A0ADD6007A66DE /* DDLocationServiceImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDLocationServiceImpl.h; sourceTree = "<group>"; };
 		F3235A1821A0ADD6007A66DE /* DDLocationServiceImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDLocationServiceImpl.m; sourceTree = "<group>"; };
-		F3235A1A21A0B3F7007A66DE /* DDMapService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDMapService.h; sourceTree = "<group>"; };
-		F3235A1D21A0B403007A66DE /* DDMapServiceImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDMapServiceImpl.h; sourceTree = "<group>"; };
-		F3235A1E21A0B403007A66DE /* DDMapServiceImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDMapServiceImpl.m; sourceTree = "<group>"; };
-		F3235A2021A0B426007A66DE /* DDMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDMapView.h; sourceTree = "<group>"; };
-		F3235A2121A0B426007A66DE /* DDMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDMapView.m; sourceTree = "<group>"; };
+		F3235A2621A0B64E007A66DE /* DDMapViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDMapViewViewController.h; sourceTree = "<group>"; };
+		F3235A2721A0B64E007A66DE /* DDMapViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDMapViewViewController.m; sourceTree = "<group>"; };
+		F3235A2821A0B64E007A66DE /* DDMapViewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDMapViewView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,11 +132,10 @@
 				F3235A0D219FFBA9007A66DE /* DDDataManager.h */,
 				F3235A0E219FFBA9007A66DE /* DDDataManager.m */,
 				F3235A2521A0B480007A66DE /* Location */,
-				F3235A1A21A0B3F7007A66DE /* DDMapService.h */,
-				F3235A1D21A0B403007A66DE /* DDMapServiceImpl.h */,
-				F3235A1E21A0B403007A66DE /* DDMapServiceImpl.m */,
-				F3235A2021A0B426007A66DE /* DDMapView.h */,
-				F3235A2121A0B426007A66DE /* DDMapView.m */,
+				F3235A2621A0B64E007A66DE /* DDMapViewViewController.h */,
+				F3235A2721A0B64E007A66DE /* DDMapViewViewController.m */,
+				F3235A2821A0B64E007A66DE /* DDMapViewView.xib */,
+				F32359DE219FDF61007A66DE /* Info.plist */,
 			);
 			path = DDSampleApp;
 			sourceTree = "<group>";
@@ -173,7 +170,6 @@
 		F3235A2321A0B433007A66DE /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				F32359DE219FDF61007A66DE /* Info.plist */,
 				F32359DF219FDF61007A66DE /* main.m */,
 			);
 			path = Support;
@@ -302,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3235A2A21A0B64E007A66DE /* DDMapViewView.xib in Resources */,
 				F32359DD219FDF61007A66DE /* LaunchScreen.storyboard in Resources */,
 				F32359DA219FDF61007A66DE /* Assets.xcassets in Resources */,
 				F32359D8219FDF60007A66DE /* Main.storyboard in Resources */,
@@ -329,13 +326,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3235A1F21A0B403007A66DE /* DDMapServiceImpl.m in Sources */,
 				F3235A06219FE78D007A66DE /* DDChooseAddressViewController.m in Sources */,
 				F32359E0219FDF61007A66DE /* main.m in Sources */,
 				F3235A1921A0ADD6007A66DE /* DDLocationServiceImpl.m in Sources */,
 				F32359D2219FDF60007A66DE /* AppDelegate.m in Sources */,
-				F3235A2221A0B426007A66DE /* DDMapView.m in Sources */,
 				F3235A0F219FFBA9007A66DE /* DDDataManager.m in Sources */,
+				F3235A2921A0B64E007A66DE /* DDMapViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

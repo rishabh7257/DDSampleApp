@@ -9,9 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-
 @interface DDDataManager : NSObject
 
-- (void)fetchRestaurantsData:(CLLocationCoordinate2D) coordinate;
+- (void)fetchRestaurantsData:(CLLocation *) location;
 
 @end

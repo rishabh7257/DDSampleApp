@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CLLocationManager.h>
 
 @protocol DDLocationService <NSObject>
 
@@ -14,7 +15,7 @@
 
 - (BOOL)isLocationServiceEnable;
 
-- (void)currentUserLocation;
+- (CLLocation *)currentUserLocation;
 
 - (void)currentUserFriendlyAddress:(CLLocation *)location
                       processBlock:(void (^)(NSString *address))processBlock;

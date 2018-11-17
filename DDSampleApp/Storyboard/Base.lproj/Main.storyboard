@@ -50,9 +50,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gqX-Bn-WQE" customClass="DDMapView">
-                                <rect key="frame" x="0.0" y="64" width="375" height="475"/>
-                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFe-x8-woS" userLabel="MapView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="483"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDX-gq-ImM">
                                 <rect key="frame" x="0.0" y="547" width="375" height="60"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -76,19 +77,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gqX-Bn-WQE" firstAttribute="top" secondItem="RuG-d2-WcN" secondAttribute="top" id="2dc-XJ-s3y"/>
+                            <constraint firstItem="vFe-x8-woS" firstAttribute="leading" secondItem="MDX-gq-ImM" secondAttribute="leading" id="089-9X-1Ga"/>
                             <constraint firstItem="RcY-FQ-bov" firstAttribute="leading" secondItem="RuG-d2-WcN" secondAttribute="leading" id="2wb-Pe-KfR"/>
+                            <constraint firstItem="vFe-x8-woS" firstAttribute="trailing" secondItem="MDX-gq-ImM" secondAttribute="trailing" id="8vf-Wv-082"/>
                             <constraint firstItem="MDX-gq-ImM" firstAttribute="height" secondItem="RcY-FQ-bov" secondAttribute="height" id="Acx-Yf-shh"/>
                             <constraint firstItem="RuG-d2-WcN" firstAttribute="trailing" secondItem="RcY-FQ-bov" secondAttribute="trailing" id="Ds4-Ew-Xx9"/>
                             <constraint firstItem="MDX-gq-ImM" firstAttribute="trailing" secondItem="RcY-FQ-bov" secondAttribute="trailing" id="ObD-r3-Gjs"/>
+                            <constraint firstItem="vFe-x8-woS" firstAttribute="width" secondItem="MDX-gq-ImM" secondAttribute="width" id="SKx-Sx-VdJ"/>
                             <constraint firstItem="MDX-gq-ImM" firstAttribute="width" secondItem="RcY-FQ-bov" secondAttribute="width" id="VTj-qr-bAl"/>
                             <constraint firstItem="RcY-FQ-bov" firstAttribute="width" secondItem="zqa-NW-HG9" secondAttribute="width" id="bI5-eP-aI2"/>
-                            <constraint firstItem="gqX-Bn-WQE" firstAttribute="leading" secondItem="MDX-gq-ImM" secondAttribute="leading" id="d6d-Xo-x8T"/>
-                            <constraint firstItem="gqX-Bn-WQE" firstAttribute="trailing" secondItem="MDX-gq-ImM" secondAttribute="trailing" id="fAA-ah-iIP"/>
                             <constraint firstItem="RuG-d2-WcN" firstAttribute="bottom" secondItem="RcY-FQ-bov" secondAttribute="bottom" id="gtZ-gu-Wt4"/>
                             <constraint firstItem="RcY-FQ-bov" firstAttribute="top" secondItem="MDX-gq-ImM" secondAttribute="bottom" id="hsl-aD-eLj"/>
-                            <constraint firstItem="MDX-gq-ImM" firstAttribute="top" secondItem="gqX-Bn-WQE" secondAttribute="bottom" constant="8" id="i51-NP-mKw"/>
-                            <constraint firstItem="gqX-Bn-WQE" firstAttribute="width" secondItem="MDX-gq-ImM" secondAttribute="width" id="iXH-ym-nnR"/>
+                            <constraint firstItem="MDX-gq-ImM" firstAttribute="top" secondItem="vFe-x8-woS" secondAttribute="bottom" id="off-dK-xzb"/>
+                            <constraint firstItem="vFe-x8-woS" firstAttribute="top" secondItem="RuG-d2-WcN" secondAttribute="top" id="wWF-Qb-7iI"/>
                             <constraint firstItem="MDX-gq-ImM" firstAttribute="leading" secondItem="RcY-FQ-bov" secondAttribute="leading" id="z3t-5z-Fnk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RuG-d2-WcN"/>
@@ -97,6 +98,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="MDX-gq-ImM" id="EPx-2S-6H4"/>
                         <outlet property="addressSelected" destination="MDX-gq-ImM" id="JdG-Sj-sai"/>
+                        <outlet property="mapView" destination="vFe-x8-woS" id="UXl-Ga-7eM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9J-Eh-BYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
