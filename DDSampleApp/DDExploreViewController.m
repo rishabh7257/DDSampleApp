@@ -48,8 +48,12 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataSource.count;
 }
-- (void)fetchRestaurantsDataFinishWithFailure {
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+}
+- (void)fetchRestaurantsDataFinishWithFailure {
+    // log a metric
 }
 
 - (void)fetchRestaurantsDataFinishWithSuccess:(NSArray<DDRestaurantModel *> *)data {
@@ -57,7 +61,6 @@
         self.dataSource = [data copy];
         [self.tableView reloadData];
     });
-
 }
 
 
