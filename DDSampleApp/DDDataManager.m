@@ -9,11 +9,12 @@
 #import "DDDataManager.h"
 
 NSString * const DDBaseUrl = @"https://api.doordash.com/";
+NSString * const DDUrlFormat = @"%@v1/store_search/?lat=%f&lng=%f";
 
 @implementation DDDataManager
 
 - (void)fetchRestaurantsData:(CLLocation *) location {
-    NSString *urlString = [[NSString alloc] initWithFormat:@"%@v1/store_search/?lat=%f&lng=%f",DDBaseUrl, location.coordinate.latitude, location.coordinate.longitude];
+    NSString *urlString = [[NSString alloc] initWithFormat:DDUrlFormat, DDBaseUrl, location.coordinate.latitude, location.coordinate.longitude];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
@@ -21,7 +22,6 @@ NSString * const DDBaseUrl = @"https://api.doordash.com/";
     
     __weak __typeof(self) weakSelf = self;
     [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        NSError *erro = nil;
         
         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
         if(httpResponse.statusCode == 200) {
@@ -32,10 +32,6 @@ NSString * const DDBaseUrl = @"https://api.doordash.com/";
         } else {
             // Log a metric here.
         }
-        dispatch_sync(dispatch_get_main_queue(),^{
-            
-            
-        });
     }] resume] ;
 }
 
