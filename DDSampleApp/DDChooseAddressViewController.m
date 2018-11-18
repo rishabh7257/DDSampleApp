@@ -47,6 +47,10 @@
     
     [self.locationService enableLocation];
     
+    if (![self.locationService isLocationServiceEnable]) {
+        [self.locationService forceRequestLocation];    
+    }
+    
     [self setLocationInAddressLabel:[self.locationService currentUserLocation]];
 
 }
@@ -61,7 +65,6 @@
     tabBarViewController.location = self.currentSelectedLocation;
     [self.navigationController pushViewController:tabBarViewController animated:YES];
 }
-
 
 #pragma mark - DDUserSelectedLocationListner
 

@@ -10,6 +10,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface DDExploreTableViewCell ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *restaurantDescription;
@@ -21,7 +22,9 @@
 @implementation DDExploreTableViewCell
 
 - (void)setContent:(DDRestaurantModel *)model {
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.cover_img_url]
+    
+    // cahing the images using SD Web image.
+    [self.logoImageView sd_setImageWithURL:[NSURL URLWithString:model.cover_img_url]
                       placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     
     self.name.text = model.name;
@@ -38,4 +41,5 @@
     self.deliveryFees = nil;
     self.status = nil;
 }
+
 @end

@@ -17,6 +17,8 @@
 
 - (CLLocation *)currentUserLocation;
 
+- (void)forceRequestLocation;
+
 - (void)currentUserFriendlyAddress:(CLLocation *)location
                       processBlock:(void (^)(NSString *address))processBlock;
 @end

@@ -43,14 +43,14 @@ NSString * const DDBaseUrl = @"https://api.doordash.com/";
     NSMutableArray<DDRestaurantModel *> *exploreData = [NSMutableArray new];
     for (NSDictionary* dict in serverResponse) {
         DDRestaurantModel *model = [DDRestaurantModel new];
-        model.shortDescription = [dict objectForKey:@"description"];
+        NSString *shortDescription = [dict objectForKey:@"description"];
+        model.shortDescription = [shortDescription componentsSeparatedByString:@","][0];
         model.cover_img_url = [dict objectForKey:@"cover_img_url"];
-        model.name = [dict objectForKey:@"name"];
+        model.name = [dict objectForKey:@"business"][@"name"];
         model.status = [dict objectForKey:@"status"];
-        CGFloat deliveryFee = [[dict objectForKey:@"delivery_fee"] floatValue];
+        CGFloat deliveryFee = [[dict objectForKey:@"delivery_fee"] floatValue]/100;
         
-        NSString *formattedDeliveryFee = deliveryFee == 0 ? @"Free Delivert" : [NSString stringWithFormat:@"$ %.02f delivery", deliveryFee];
-        model.delivery_fee = formattedDeliveryFee;
+        model.delivery_fee = deliveryFee == 0 ? @"Free Delivery" : [NSString stringWithFormat:@"$ %.02f delivery", deliveryFee];
         [exploreData addObject:model];
     }
     return exploreData;

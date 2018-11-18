@@ -11,6 +11,7 @@
 #import "DDLocationServiceImpl.h"
 
 @interface DDMapViewViewController () <MKMapViewDelegate, UIGestureRecognizerDelegate>
+
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic) CLGeocoder *geocoder;
 @property (nonatomic) UITapGestureRecognizer *mapTapGesture;
@@ -34,7 +35,6 @@
     self.annotation = [[MKPointAnnotation alloc] init];
     self.geocoder = [CLGeocoder new];
     [self.mapView addAnnotation:self.annotation];
-
 }
 
 - (void)mapTapAction:(UITapGestureRecognizer *)tapGestureRecognizer {
@@ -49,12 +49,11 @@
     [self.delegate userDidSelectLocation:location];
 }
 
--(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
     CLLocationCoordinate2D currentLocation2D = [self.locationService currentUserLocation].coordinate;
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(currentLocation2D, 800, 800);
     MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:viewRegion];
     [self.mapView setRegion:adjustedRegion animated:YES];
-
 }
 
 @end

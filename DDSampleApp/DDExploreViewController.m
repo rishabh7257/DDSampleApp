@@ -21,7 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor redColor]];
     self.dataManager = [DDDataManager new];
     [self.dataManager fetchRestaurantsData:self.location];
     self.dataManager.delegate = self;
@@ -31,8 +30,17 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"DDExploreTableCell" bundle:nil] forCellReuseIdentifier:@"reuse"];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.tableView.estimatedRowHeight = 44;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceDidRotate:)                                        name:UIDeviceOrientationDidChangeNotification object:nil];
+    
     [self.view addSubview:self.tableView];
+}
 
+- (void)deviceDidRotate:(NSNotification *)notification {
+    [self.tableView setNeedsLayout];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -50,8 +58,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    // No Impl
 }
+
 - (void)fetchRestaurantsDataFinishWithFailure {
     // log a metric
 }
@@ -62,6 +71,5 @@
         [self.tableView reloadData];
     });
 }
-
 
 @end

@@ -36,10 +36,6 @@
 
 #pragma mark - DDLocationService
 
-- (NSString *)currentUserFriendlyAddress {
-    return @"";
-}
-
 - (void)currentUserFriendlyAddress:(CLLocation *)location
                processBlock:(void (^)(NSString *address))processBlock {
     [self.geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
@@ -89,6 +85,10 @@
         default:
             break;
     }
+}
+
+- (void)forceRequestLocation {
+    [self.locationManager requestWhenInUseAuthorization];
 }
 
 - (CLLocation *)currentUserLocation {
