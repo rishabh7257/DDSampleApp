@@ -32,7 +32,8 @@
     self.tableView.delegate = self;
     self.tableView.estimatedRowHeight = 44;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceDidRotate:)                                        name:UIDeviceOrientationDidChangeNotification object:nil];
     
