@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0533878E33A89A6C582AF89D /* libPods-DDSampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D3E93260771DF460793CC6 /* libPods-DDSampleApp.a */; };
+		09CBC141C6C8CAB14FFA6373 /* libPods-DDSampleAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A6B6D72EA60046DCA160FC /* libPods-DDSampleAppTests.a */; };
+		8F68491AB9EDA52B938710C4 /* libPods-DDSampleAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E18625157D72D729BB70F80F /* libPods-DDSampleAppUITests.a */; };
 		F32359D2219FDF60007A66DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F32359D1219FDF60007A66DE /* AppDelegate.m */; };
 		F32359D8219FDF60007A66DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32359D6219FDF60007A66DE /* Main.storyboard */; };
 		F32359DA219FDF61007A66DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F32359D9219FDF61007A66DE /* Assets.xcassets */; };
@@ -21,6 +24,13 @@
 		F3235A1921A0ADD6007A66DE /* DDLocationServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A1821A0ADD6007A66DE /* DDLocationServiceImpl.m */; };
 		F3235A2921A0B64E007A66DE /* DDMapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A2721A0B64E007A66DE /* DDMapViewViewController.m */; };
 		F3235A2A21A0B64E007A66DE /* DDMapViewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3235A2821A0B64E007A66DE /* DDMapViewView.xib */; };
+		F3235A3221A0CB40007A66DE /* DDExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A3121A0CB40007A66DE /* DDExploreViewController.m */; };
+		F3235A3521A0CB5A007A66DE /* DDFavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A3421A0CB5A007A66DE /* DDFavoritesViewController.m */; };
+		F3235A3821A0CD9F007A66DE /* DDGlobalContstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A3721A0CD9F007A66DE /* DDGlobalContstants.m */; };
+		F3235A3B21A0D093007A66DE /* DDTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A3A21A0D093007A66DE /* DDTabBarViewController.m */; };
+		F3235A3E21A0DD3B007A66DE /* DDRestaurantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A3D21A0DD3B007A66DE /* DDRestaurantModel.m */; };
+		F3235A4021A0E993007A66DE /* DDExploreTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3235A3F21A0E993007A66DE /* DDExploreTableCell.xib */; };
+		F3235A4321A0EC45007A66DE /* DDExploreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3235A4221A0EC45007A66DE /* DDExploreTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +51,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03A6B6D72EA60046DCA160FC /* libPods-DDSampleAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DDSampleAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D3E93260771DF460793CC6 /* libPods-DDSampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DDSampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79FBE58F19DA29D406E6F508 /* Pods-DDSampleAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDSampleAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DDSampleAppTests/Pods-DDSampleAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		97F8027186A02AA5EF5A2693 /* Pods-DDSampleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDSampleAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DDSampleAppTests/Pods-DDSampleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B9AD0B214F65F8F77FFF5EE6 /* Pods-DDSampleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDSampleAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DDSampleAppUITests/Pods-DDSampleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C2AF3497283BAF57A41D470F /* Pods-DDSampleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDSampleAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DDSampleAppUITests/Pods-DDSampleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E18625157D72D729BB70F80F /* libPods-DDSampleAppUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DDSampleAppUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F32359CD219FDF60007A66DE /* DDSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F32359D0219FDF60007A66DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F32359D1219FDF60007A66DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -70,6 +87,21 @@
 		F3235A2621A0B64E007A66DE /* DDMapViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDMapViewViewController.h; sourceTree = "<group>"; };
 		F3235A2721A0B64E007A66DE /* DDMapViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDMapViewViewController.m; sourceTree = "<group>"; };
 		F3235A2821A0B64E007A66DE /* DDMapViewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDMapViewView.xib; sourceTree = "<group>"; };
+		F3235A3021A0CB40007A66DE /* DDExploreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDExploreViewController.h; sourceTree = "<group>"; };
+		F3235A3121A0CB40007A66DE /* DDExploreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDExploreViewController.m; sourceTree = "<group>"; };
+		F3235A3321A0CB5A007A66DE /* DDFavoritesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDFavoritesViewController.h; sourceTree = "<group>"; };
+		F3235A3421A0CB5A007A66DE /* DDFavoritesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDFavoritesViewController.m; sourceTree = "<group>"; };
+		F3235A3621A0CD9F007A66DE /* DDGlobalContstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDGlobalContstants.h; sourceTree = "<group>"; };
+		F3235A3721A0CD9F007A66DE /* DDGlobalContstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDGlobalContstants.m; sourceTree = "<group>"; };
+		F3235A3921A0D093007A66DE /* DDTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDTabBarViewController.h; sourceTree = "<group>"; };
+		F3235A3A21A0D093007A66DE /* DDTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDTabBarViewController.m; sourceTree = "<group>"; };
+		F3235A3C21A0DD3B007A66DE /* DDRestaurantModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDRestaurantModel.h; sourceTree = "<group>"; };
+		F3235A3D21A0DD3B007A66DE /* DDRestaurantModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDRestaurantModel.m; sourceTree = "<group>"; };
+		F3235A3F21A0E993007A66DE /* DDExploreTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDExploreTableCell.xib; sourceTree = "<group>"; };
+		F3235A4121A0EC45007A66DE /* DDExploreTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDExploreTableViewCell.h; sourceTree = "<group>"; };
+		F3235A4221A0EC45007A66DE /* DDExploreTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDExploreTableViewCell.m; sourceTree = "<group>"; };
+		F602F3719EF059042B2C6C0B /* Pods-DDSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDSampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DDSampleApp/Pods-DDSampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		FEDA258C0BECBA2824EF30CC /* Pods-DDSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDSampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DDSampleApp/Pods-DDSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +111,7 @@
 			files = (
 				F3235A1321A0A9FE007A66DE /* Contacts.framework in Frameworks */,
 				F3235A0C219FEF09007A66DE /* CoreLocation.framework in Frameworks */,
+				0533878E33A89A6C582AF89D /* libPods-DDSampleApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09CBC141C6C8CAB14FFA6373 /* libPods-DDSampleAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,12 +127,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F68491AB9EDA52B938710C4 /* libPods-DDSampleAppUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66ED8F9A413E0F114AC2D64C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEDA258C0BECBA2824EF30CC /* Pods-DDSampleApp.debug.xcconfig */,
+				F602F3719EF059042B2C6C0B /* Pods-DDSampleApp.release.xcconfig */,
+				97F8027186A02AA5EF5A2693 /* Pods-DDSampleAppTests.debug.xcconfig */,
+				79FBE58F19DA29D406E6F508 /* Pods-DDSampleAppTests.release.xcconfig */,
+				C2AF3497283BAF57A41D470F /* Pods-DDSampleAppUITests.debug.xcconfig */,
+				B9AD0B214F65F8F77FFF5EE6 /* Pods-DDSampleAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F32359C4219FDF60007A66DE = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +155,7 @@
 				F32359F3219FDF62007A66DE /* DDSampleAppUITests */,
 				F32359CE219FDF60007A66DE /* Products */,
 				F3235A0A219FEF09007A66DE /* Frameworks */,
+				66ED8F9A413E0F114AC2D64C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +185,19 @@
 				F3235A2721A0B64E007A66DE /* DDMapViewViewController.m */,
 				F3235A2821A0B64E007A66DE /* DDMapViewView.xib */,
 				F32359DE219FDF61007A66DE /* Info.plist */,
+				F3235A3021A0CB40007A66DE /* DDExploreViewController.h */,
+				F3235A3121A0CB40007A66DE /* DDExploreViewController.m */,
+				F3235A3321A0CB5A007A66DE /* DDFavoritesViewController.h */,
+				F3235A3421A0CB5A007A66DE /* DDFavoritesViewController.m */,
+				F3235A3621A0CD9F007A66DE /* DDGlobalContstants.h */,
+				F3235A3721A0CD9F007A66DE /* DDGlobalContstants.m */,
+				F3235A3921A0D093007A66DE /* DDTabBarViewController.h */,
+				F3235A3A21A0D093007A66DE /* DDTabBarViewController.m */,
+				F3235A3C21A0DD3B007A66DE /* DDRestaurantModel.h */,
+				F3235A3D21A0DD3B007A66DE /* DDRestaurantModel.m */,
+				F3235A3F21A0E993007A66DE /* DDExploreTableCell.xib */,
+				F3235A4121A0EC45007A66DE /* DDExploreTableViewCell.h */,
+				F3235A4221A0EC45007A66DE /* DDExploreTableViewCell.m */,
 			);
 			path = DDSampleApp;
 			sourceTree = "<group>";
@@ -163,6 +225,9 @@
 			children = (
 				F3235A1221A0A9FE007A66DE /* Contacts.framework */,
 				F3235A0B219FEF09007A66DE /* CoreLocation.framework */,
+				79D3E93260771DF460793CC6 /* libPods-DDSampleApp.a */,
+				03A6B6D72EA60046DCA160FC /* libPods-DDSampleAppTests.a */,
+				E18625157D72D729BB70F80F /* libPods-DDSampleAppUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -202,6 +267,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F32359F9219FDF62007A66DE /* Build configuration list for PBXNativeTarget "DDSampleApp" */;
 			buildPhases = (
+				A922462FA674DD27EE21E53F /* [CP] Check Pods Manifest.lock */,
 				F32359C9219FDF60007A66DE /* Sources */,
 				F32359CA219FDF60007A66DE /* Frameworks */,
 				F32359CB219FDF60007A66DE /* Resources */,
@@ -219,6 +285,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F32359FC219FDF62007A66DE /* Build configuration list for PBXNativeTarget "DDSampleAppTests" */;
 			buildPhases = (
+				9A52588D3CD8A497A6DF9DAD /* [CP] Check Pods Manifest.lock */,
 				F32359E1219FDF62007A66DE /* Sources */,
 				F32359E2219FDF62007A66DE /* Frameworks */,
 				F32359E3219FDF62007A66DE /* Resources */,
@@ -237,6 +304,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F32359FF219FDF62007A66DE /* Build configuration list for PBXNativeTarget "DDSampleAppUITests" */;
 			buildPhases = (
+				9A8EB984AAE379B7942D195A /* [CP] Check Pods Manifest.lock */,
 				F32359EC219FDF62007A66DE /* Sources */,
 				F32359ED219FDF62007A66DE /* Frameworks */,
 				F32359EE219FDF62007A66DE /* Resources */,
@@ -301,6 +369,7 @@
 				F3235A2A21A0B64E007A66DE /* DDMapViewView.xib in Resources */,
 				F32359DD219FDF61007A66DE /* LaunchScreen.storyboard in Resources */,
 				F32359DA219FDF61007A66DE /* Assets.xcassets in Resources */,
+				F3235A4021A0E993007A66DE /* DDExploreTableCell.xib in Resources */,
 				F32359D8219FDF60007A66DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,16 +390,91 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9A52588D3CD8A497A6DF9DAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DDSampleAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A8EB984AAE379B7942D195A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DDSampleAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A922462FA674DD27EE21E53F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DDSampleApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F32359C9219FDF60007A66DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3235A3521A0CB5A007A66DE /* DDFavoritesViewController.m in Sources */,
 				F3235A06219FE78D007A66DE /* DDChooseAddressViewController.m in Sources */,
 				F32359E0219FDF61007A66DE /* main.m in Sources */,
 				F3235A1921A0ADD6007A66DE /* DDLocationServiceImpl.m in Sources */,
 				F32359D2219FDF60007A66DE /* AppDelegate.m in Sources */,
+				F3235A3221A0CB40007A66DE /* DDExploreViewController.m in Sources */,
 				F3235A0F219FFBA9007A66DE /* DDDataManager.m in Sources */,
+				F3235A3821A0CD9F007A66DE /* DDGlobalContstants.m in Sources */,
+				F3235A3B21A0D093007A66DE /* DDTabBarViewController.m in Sources */,
+				F3235A4321A0EC45007A66DE /* DDExploreTableViewCell.m in Sources */,
+				F3235A3E21A0DD3B007A66DE /* DDRestaurantModel.m in Sources */,
 				F3235A2921A0B64E007A66DE /* DDMapViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +647,7 @@
 		};
 		F32359FA219FDF62007A66DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEDA258C0BECBA2824EF30CC /* Pods-DDSampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -519,6 +664,7 @@
 		};
 		F32359FB219FDF62007A66DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F602F3719EF059042B2C6C0B /* Pods-DDSampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +681,7 @@
 		};
 		F32359FD219FDF62007A66DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97F8027186A02AA5EF5A2693 /* Pods-DDSampleAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -553,6 +700,7 @@
 		};
 		F32359FE219FDF62007A66DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79FBE58F19DA29D406E6F508 /* Pods-DDSampleAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -571,6 +719,7 @@
 		};
 		F3235A00219FDF62007A66DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2AF3497283BAF57A41D470F /* Pods-DDSampleAppUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DDSampleAppUITests/Info.plist;
@@ -588,6 +737,7 @@
 		};
 		F3235A01219FDF62007A66DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9AD0B214F65F8F77FFF5EE6 /* Pods-DDSampleAppUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DDSampleAppUITests/Info.plist;

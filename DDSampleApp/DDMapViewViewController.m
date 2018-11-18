@@ -21,6 +21,7 @@
 
 @implementation DDMapViewViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -36,8 +37,7 @@
 
 }
 
-- (void)mapTapAction:(UITapGestureRecognizer *)tapGestureRecognizer
-  processBlock:(void (^)(NSString *address))processBlock {
+- (void)mapTapAction:(UITapGestureRecognizer *)tapGestureRecognizer {
     
     CGPoint point = [tapGestureRecognizer locationInView:self.mapView];
     CLLocationCoordinate2D coordinate = [self.mapView convertPoint:point toCoordinateFromView:self.mapView];
@@ -46,7 +46,7 @@
 
     CLLocation *location = [[CLLocation alloc] initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
     
-    [self.locationService currentUserFriendlyAddress:location processBlock:processBlock];
+    [self.delegate userDidSelectLocation:location];
 }
 
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
@@ -56,7 +56,5 @@
     [self.mapView setRegion:adjustedRegion animated:YES];
 
 }
-
-
 
 @end

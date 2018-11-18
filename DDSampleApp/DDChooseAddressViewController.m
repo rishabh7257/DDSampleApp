@@ -13,6 +13,8 @@
 #import "DDLocationService.h"
 #import "DDLocationServiceImpl.h"
 #import "DDMapViewViewController.h"
+#import "DDGlobalContstants.h"
+#import "DDTabBarViewController.h"
 
 @class CLPlacemark;
 
@@ -25,7 +27,7 @@
 @property (nonatomic) id<DDLocationService> locationService;
 @property (nonatomic) DDMapViewViewController *mapViewController;
 @property (nonatomic) UITapGestureRecognizer *mapTapGesture;
-
+@property (nonatomic) CLLocation *currentSelectedLocation;
 @end
 
 @implementation DDChooseAddressViewController
@@ -50,49 +52,16 @@
 }
 
 - (void)mapTapAction:(UITapGestureRecognizer *)tapGestureRecognizer {
-    [self.mapViewController mapTapAction:tapGestureRecognizer processBlock:^(NSString *address) {
-        [self.addressLabel setText:address];
-    }];
+    [self.mapViewController mapTapAction:tapGestureRecognizer];
 }
 
+- (IBAction)confirmAddressButtonDidTap:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:STORY_BOARD_MAIN_NAME bundle: nil];
+    DDTabBarViewController *tabBarViewController = (DDTabBarViewController *)[storyboard instantiateViewControllerWithIdentifier:STORY_BOARD_ID_TAB_BAR_VIEW_CONTROLLER];
+    tabBarViewController.location = self.currentSelectedLocation;
+    [self.navigationController pushViewController:tabBarViewController animated:YES];
+}
 
-//- (void)setAddressForLocation:(CLLocation *)location {
-//    [self.geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
-//        if (error) {
-//            NSLog(@"Geocode failed with error: %@", error);
-//            return; // Request failed, log error
-//        }
-//
-//        // Check if any placemarks were found
-//        if (placemarks && placemarks.count > 0)
-//        {
-//            CLPlacemark *placemark = placemarks[0];
-//
-//            // Dictionary containing address information
-//            CNPostalAddress *postalAddress =
-//            placemark.postalAddress;
-//
-//            NSString *completeAddress = [[NSString alloc] initWithFormat:@"%@ %@", postalAddress.street, postalAddress.city];
-//            [self.addressLabel setText:completeAddress];
-//        }
-//    }];
-//}
-
-//-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
-//    MKCoordinateRegion mapRegion;
-//    mapRegion.center = mapView.userLocation.coordinate;
-//    mapRegion.span.latitudeDelta = 0.2;
-//    mapRegion.span.longitudeDelta = 0.2;
-//    
-//    [mapView setRegion:mapRegion animated: YES];
-//    
-//    CLLocationCoordinate2D noLocation = self.locationManager.location.coordinate;
-//    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(noLocation, 800, 800);
-//    MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:viewRegion];
-//    [self.mapView setRegion:adjustedRegion animated:YES];
-//    
-//    [self setAddressForLocation:userLocation.location];
-//}
 
 #pragma mark - DDUserSelectedLocationListner
 
@@ -101,6 +70,8 @@
 }
 
 - (void)setLocationInAddressLabel:(CLLocation *)newLocation {
+    self.currentSelectedLocation = newLocation;
+
     [self.locationService currentUserFriendlyAddress:newLocation processBlock:^(NSString *address) {
         [self.addressLabel setText:address];
     }];

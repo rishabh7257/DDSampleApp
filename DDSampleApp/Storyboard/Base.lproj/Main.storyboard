@@ -14,7 +14,7 @@
         <scene sceneID="X6w-1t-zv0">
             <objects>
                 <viewController id="uXU-Cu-2UU" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Uwk-kf-7Ua">
+                    <view key="view" tag="2" contentMode="scaleToFill" id="Uwk-kf-7Ua">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -29,9 +29,8 @@
         <!--Explore-->
         <scene sceneID="Rp7-fK-Zop">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5cx-Yv-4AF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="LV0-l9-XGt" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vV4-yF-Yif">
+                <viewController id="LV0-l9-XGt" customClass="DDExploreViewController" sceneMemberID="viewController">
+                    <view key="view" tag="1" contentMode="scaleToFill" id="vV4-yF-Yif">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -39,6 +38,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Explore" image="tab-explore" id="vO7-6v-o6r"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5cx-Yv-4AF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="823.20000000000005" y="172.26386806596702"/>
         </scene>
@@ -71,7 +71,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9oW-o5-gWc" kind="show" id="2Sj-8O-6g0"/>
+                                    <action selector="confirmAddressButtonDidTap:" destination="tw5-va-WVd" eventType="touchUpInside" id="DV5-5Z-HCq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,14 +105,15 @@
             </objects>
             <point key="canvasLocation" x="-772" y="171.36431784107947"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="Eh5-nx-f4K">
             <objects>
-                <tabBarController id="9oW-o5-gWc" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tab_bar_vc" id="9oW-o5-gWc" customClass="DDTabBarViewController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b9W-hE-pFD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.98823529409999999" green="0.12941176469999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="LV0-l9-XGt" kind="relationship" relationship="viewControllers" id="ctF-CK-pUz"/>

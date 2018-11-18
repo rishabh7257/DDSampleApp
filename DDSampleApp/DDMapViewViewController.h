@@ -17,8 +17,7 @@
 
 @interface DDMapViewViewController : UIViewController
 
-- (void)mapTapAction:(UITapGestureRecognizer *)tapGestureRecognizer
-  processBlock:(void (^)(NSString *address))processBlock;
+- (void)mapTapAction:(UITapGestureRecognizer *)tapGestureRecognizer;
 
 @property (nonatomic, weak) id<DDUserSelectedLocationListner> delegate;
 
